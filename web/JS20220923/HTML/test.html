@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<form action="" name="fn">
+  <header id="hh">
+    <h1 id="h">Board</h1>
+  </header>
+  <section id="ss">
+    <table>
+      <tr>
+        <td id="num"></td>
+        <td id="ttitle">제목</td>
+        <td id="name">작성자</td>
+        <td id="check">조회수</td>
+        <td id="like">좋아요</td>
+        <td id="date">날짜</td>
+      </tr>
+    </table>
+
+  </section>
+  <footer id="ff">
+
+  </footer>
+
+</form>
+<script>
+  var nowdate = new Date();
+  var year = nowdate.getFullYear();
+  var Month = nowdate.getMonth();
+  var day = nowdate.getDate();
+  var currentDate = new Date(year,Month,day);
+  new Vue({
+    el:'#app',
+    data:{
+      num:'',
+      ttitle:'',
+      name:'',
+      check:'',
+      like:'',
+      date:currentDate
+    },
+    method:{
+      insertData: function(){
+
+      }
+    }
+  })
+</script>
+</body>
+</html>
